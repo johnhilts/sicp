@@ -1,3 +1,9 @@
+(define (next n)
+  (cond
+   ((= 2 n)
+    3)
+   (else (+ 2 n))))
+
 (define (square n)
   (* n n))
 
@@ -7,7 +13,7 @@
 (define (find-divisor n test-divisor)
   (cond ((> (square test-divisor) n) n)
         ((divides? test-divisor n) test-divisor)
-        (else (find-divisor n (+ test-divisor 1)))))
+        (else (find-divisor n (next test-divisor)))))
 
 (define (divides? a b)
   (= (remainder b a) 0))
