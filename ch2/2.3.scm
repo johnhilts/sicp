@@ -20,5 +20,5 @@
 
 (define (rectangle-perimeter rectangle)
   (+
-   (* 2 (rectangle-length))
-   (* 2 (rectangle-width))))
+   (* 2 (rectangle-length rectangle))
+   (* 2 (rectangle-width rectangle))))
