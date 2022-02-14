@@ -1,7 +1,7 @@
 (define (same-parity x . y)
   (let ((parity (remainder x 2)))
     (define (same-parity-r y)
-      (if (null? y)
+      (if (null? (cdr y))
           ()
           (if (= parity (remainder (car y) 2))
               (append (list (car y)) (same-parity-r (cdr y)))
