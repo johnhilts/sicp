@@ -1,6 +1,6 @@
 (define (sicp-reverse l)
-  (if (null? l)
-      ()
+  (if (null? (cdr l))
+      (list (car l))
       (append (sicp-reverse (cdr l)) (list (car l)))))
 
 ;; (sicp-reverse (list 1 4 9 16 25))

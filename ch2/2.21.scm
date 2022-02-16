@@ -5,7 +5,7 @@
   (if (null? items)
       ()
       (cons (proc (car items))
-            (map proc (cdr items)))))
+            (sicp-map proc (cdr items)))))
 
 (define (square-list-1 items)
   (if (null? items)
